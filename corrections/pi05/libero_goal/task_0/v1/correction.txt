@@ -1,0 +1,1 @@
+left slightly 0.0~0.5s; down slightly 0.0~0.5s

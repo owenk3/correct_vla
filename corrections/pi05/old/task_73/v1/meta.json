@@ -1,0 +1,10 @@
+{
+  "task_id": 73,
+  "episode": 367,
+  "version": "v1",
+  "task": "pick_up_the_book_and_place_it_in_the_front_compart",
+  "files": [
+    "correction.txt",
+    "correction_params.json"
+  ]
+}

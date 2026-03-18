@@ -1,0 +1,22 @@
+{
+  "axes": [
+    {
+      "dimension": "y",
+      "direction": "-1",
+      "magnitude_term": "more",
+      "magnitude_value": -0.4,
+      "t_start": 5.0,
+      "t_end": 6.5,
+      "reason": "Frying pan is to the left (-Y) of the pot; move arm left during grasp."
+    },
+    {
+      "dimension": "z",
+      "direction": "-1",
+      "magnitude_term": "slightly",
+      "magnitude_value": -0.2,
+      "t_start": 5.5,
+      "t_end": 6.2,
+      "reason": "Move arm down to grab frying pan handle."
+    }
+  ]
+}

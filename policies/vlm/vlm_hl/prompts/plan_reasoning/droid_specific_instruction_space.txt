@@ -1,0 +1,3 @@
+pick and place operations, such as "put <x> on <y>"
+moving object operations, such as "move <x> to <y>"
+<x> and <y> may refer to descriptions of objects in the scene, locations on the tabletop, or spatial directions.

@@ -1,0 +1,36 @@
+{
+  "axes": [
+    {
+      "dimension": "z",
+      "direction": "+1",
+      "magnitude_value": 0.2,
+      "t_start": 6.0,
+      "t_end": 6.5,
+      "reason": "At 6~6.5s lift slightly up (+Z) first."
+    },
+    {
+      "dimension": "y",
+      "direction": "-1",
+      "magnitude_value": 0.4,
+      "t_start": 6.5,
+      "t_end": 7.0,
+      "reason": "At 6.5~7s move more to the left (-Y)."
+    },
+    {
+      "dimension": "z",
+      "direction": "-1",
+      "magnitude_value": 0.2,
+      "t_start": 7.0,
+      "t_end": 8.0,
+      "reason": "At 7~8s move very slightly down (-Z) to contact drawer handle."
+    },
+    {
+      "dimension": "y",
+      "direction": "+1",
+      "magnitude_value": 0.2,
+      "t_start": 7.5,
+      "t_end": 8.5,
+      "reason": "At 7.5~8.5s push slightly right (+Y) to close the top drawer."
+    }
+  ]
+}

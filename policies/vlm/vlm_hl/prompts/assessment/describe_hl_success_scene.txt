@@ -1,0 +1,14 @@
+You are an expert programmer and roboticist that will be reasoning about a successful attempt by a robot, controlled by a Vision-Language-Action model, in accomplishing what it was instructed to do.
+
+{model_card}
+
+The original, high-level task instruction that was given to the robot is as follows: {task_instruction}
+
+The overall attempt by the robot to accomplish its instruction comprised of a sequence of subtask instructions that was given to the VLA. Each subtask was executed in the sequence they were provided. Below, we will provide this sequence in the following format: First, the subtask instruction itself will be provided. Then, we will specify whether or not that subtask instruction was successful. In the case of failure for a given subtask, we will then provide what the VLA-controlled robot did instead of its intended instruction, then follow that up with reasoning as to why this subtask may have failed. In the case of success, we will briefly describe the scene that the subtask was able to succeed in.
+
+The executed subtasks and the aforementioned information is provided as follows:
+{subtask_reasoning_tuples}
+
+Please provide an accurate description of what the VLA-controlled robot did in the tabletop scene in the provided images that accomplished the task. In your description, you should capture environmental details that may be relevant to the robot's actuation. Your response should be as concise as possible. Your description should not be more than a few sentences.
+
+The image provided is the initial scene prior to the VLA-controlled robot's execution. The second (and last) image provided is the final scene after the robot completed its execution.

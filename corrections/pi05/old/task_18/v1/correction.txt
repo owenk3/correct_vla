@@ -1,0 +1,1 @@
+Wrong object grasped at 5-6s: robot picked up pot instead of frying pan. Frying pan is to the left of the pot (negative Y direction). Move arm left ~0.4 and more down before grasping to select frying pan, not pot.

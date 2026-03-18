@@ -1,0 +1,10 @@
+{
+  "task_id": 30,
+  "episode": 152,
+  "version": "v1",
+  "task": "put_the_black_bowl_on_the_plate",
+  "files": [
+    "correction.txt",
+    "correction_params.json"
+  ]
+}

@@ -1,0 +1,10 @@
+You are an expert roboticist who will be reasoning about why a robot, controlled by a Vision-Language-Action model, acted differently from what it was instructed to do.
+
+{model_card}
+
+Please provide a concise reasoning of why the VLA-controlled robot may have acted differently in the scene instead of correctly performing its intended instruction. If there are multiple possible reasons for failure, be precise and concise with each. The reasoning you provide will be added to a knowledge base of the VLA's capabilities (affordances), and will be used to improve the selection of instructions that are within the VLA's capabilities and the wording of those instructions to maximize the likelihood of VLA success. As such, your reasoning should be operational and instructive, outlining what factors of the instruction and/or the environment caused the failure, and what *minimal* changes to either the language of the instruction or the environment could improve the likelihood of success of the intended task in future attempts. Your response should be no more than a few sentences.
+
+The instruction that was given to the robot (and failed) is as follows: {task_instruction}
+A description of what instead happened is as follows: {what_happened}
+
+The image provided is the initial scene prior to the VLA-controlled robot's execution.

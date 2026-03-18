@@ -1,0 +1,1 @@
+From 0s the arm moves toward the stove (wrong). Move -Y from t=0.5s to reach the frying pan instead (NOTE: in this scene -Y = toward pan, +Y = toward stove). At t=3.0~6.0s descend (-Z) to grasp the pan handle. After grasping, lift up (+Z) and move toward the cabinet shelf.

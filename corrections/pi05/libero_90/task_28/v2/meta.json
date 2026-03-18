@@ -1,0 +1,6 @@
+{
+  "task_id": 2,
+  "task": "open_the_middle_drawer_of_the_cabinet",
+  "version": "v2",
+  "feedback": "right slightly 0.0~0.5s; forward slightly 0.0~1.0s"
+}

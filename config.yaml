@@ -1,0 +1,39 @@
+# correctvla global config
+# Referenced by scripts via policies/vlm/config.py
+
+vlm:
+  failure_dir: "./rollouts/failure"
+  context_dir: "./context"
+  corrections_dir: "./corrections"
+
+  # Timestamp → suite mapping
+  timestamp_to_suite:
+    # pi0.5 in-distribution (2026-02-21)
+    "2026_02_21-17_27_35": "libero_spatial"
+    "2026_02_21-18_16_23": "libero_object"
+    "2026_02_21-19_16_14": "libero_goal"
+    "2026_02_21-20_06_45": "libero_10"
+    # pi0.5 out-of-distribution (2026-02-22)
+    "2026_02_22-21_00_14": "libero_90"
+    # OpenVLA-OFT in-distribution (2026-02-26)
+    "2026_02_26-11_30_42": "libero_spatial"
+    "2026_02_26-12_24_44": "libero_object"
+    "2026_02_26-13_22_39": "libero_goal"
+    "2026_02_26-14_12_26": "libero_10"
+    # OpenVLA-OFT out-of-distribution (2026-02-26)
+    "2026_02_26-16_09_16": "libero_90"
+
+  num_trials_per_task: 50
+
+  # OpenAI model names for VLM calls
+  openai_vision_model: "gpt-5-mini"   # image-related tasks
+  openai_text_model: "gpt-5-mini"     # text-only tasks
+  openai_reasoning_model: "gpt-5"     # ICA plan generation
+
+pi05:
+  n_action_steps: 10  # number of actions to execute per inference call
+
+eval:
+  num_steps_wait: 10  # warm-up steps after env reset
+  env_img_res: 256    # environment image resolution
+  seed: 7

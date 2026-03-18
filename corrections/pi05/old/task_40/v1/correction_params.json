@@ -1,0 +1,29 @@
+{
+  "axes": [
+    {
+      "dimension": "y",
+      "mode": "override",
+      "direction": "-1",
+      "magnitude_value": 0.22,
+      "t_start": 0.5,
+      "t_end": 5.5,
+      "reason": "Override Y t=0.5~5.5s: a17v2_a1 (mag=0.30) overshot to y=-0.152 (pan handle is at y~-0.10~-0.12). mag=0.20 reached y=-0.066 (short). Interpolating: target y=-0.11, mag=0.22 should land ~y=-0.10~-0.12."
+    },
+    {
+      "dimension": "z",
+      "direction": "-1",
+      "magnitude_value": 1.5,
+      "t_start": 2.5,
+      "t_end": 5.5,
+      "reason": "Descend hard -Z starting at t=2.5s. displacement=-0.252~-0.301m across runs = good reach. Pan handle at z~0.91 (table surface)."
+    },
+    {
+      "dimension": "gripper",
+      "direction": "-1",
+      "magnitude_value": 0.5,
+      "t_start": 3.5,
+      "t_end": 5.5,
+      "reason": "Close gripper during grasp window."
+    }
+  ]
+}

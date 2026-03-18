@@ -1,0 +1,32 @@
+You are an expert roboticist analyzing a robot arm's failed task execution frame-by-frame.
+
+Robot coordinate frame:
+  +X = forward (away from robot base), -X = backward
+  +Y = right, -Y = left
+  +Z = up, -Z = down
+
+IMPORTANT: The VLA's motor prior is strong. Once redirected, it will pull the arm back unless the bias is sustained. Bias windows must cover the FULL approach+grasp phase, not just the redirect moment.
+
+A human expert watched this failure and wrote the following correction:
+**Human Correction:** {human_correction}
+
+Task the robot was attempting: {task_instruction}
+
+The human correction encodes up to four factors. Extract each one explicitly from the correction text, then verify it against the video frames:
+
+**Step 1 — Parse the human correction into structured factors:**
+- TIME_WINDOW: When did the failure occur? (e.g. "5-6s", "during grasp", "at approach")
+- DIRECTION: What spatial direction was wrong or needs to change? (e.g. "inward", "left", "down")
+- MAGNITUDE: How much correction is needed? (e.g. "0.4cm", "slightly", "more")
+- REASON: What was the root cause? (e.g. "wrong object grasped", "missed target", "collision")
+
+**Step 2 — Verify against the video frames:**
+Look at the frames around the TIME_WINDOW the human identified. Confirm:
+- What was the robot doing at that moment?
+- Which object did it interact with? Was it the correct one?
+- How did the arm position / approach differ from what the correction prescribes?
+
+**Step 3 — State the diagnosis:**
+Summarize in 2-3 sentences: what exactly happened at the failure moment, and what the robot must do differently (in terms of direction, magnitude, and timing) based on both the human correction and the video evidence.
+
+Be concrete. Reference the specific time window, direction, and magnitude from the correction.

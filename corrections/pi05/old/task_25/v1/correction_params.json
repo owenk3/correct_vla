@@ -1,0 +1,50 @@
+{
+  "axes": [
+    {
+      "dimension": "z",
+      "direction": "+1",
+      "magnitude_value": 5.34,
+      "envelope": "ramp",
+      "t_start": 3.4,
+      "t_end": 4.1,
+      "reason": "3.4~4.1s move up (+Z) 12x action_std, linearly increasing."
+    },
+    {
+      "dimension": "x",
+      "direction": "-1",
+      "magnitude_value": 0.5,
+      "envelope": "flat",
+      "t_start": 4.0,
+      "t_end": 6.0,
+      "reason": "4.0~6.0s move video-backward (-X world) mag=1.0."
+    },
+    {
+      "dimension": "y",
+      "direction": "+1",
+      "magnitude_value": 1.0,
+      "envelope": "flat",
+      "t_start": 4.0,
+      "t_end": 6.5,
+      "reason": "4.0~6.5s move video-left (+Y world) ~1 magnitude."
+    },
+    {
+      "dimension": "z",
+      "direction": "-1",
+      "magnitude_value": 0.445,
+      "envelope": "flat",
+      "t_start": 6.5,
+      "t_end": 7.0,
+      "reason": "6.5~7.0s move down (-Z) 1x action_std, lower onto cabinet."
+    },
+    {
+      "dimension": "gripper",
+      "direction": "+1",
+      "magnitude_value": 1.0,
+      "mode": "override",
+      "envelope": "flat",
+      "t_start": 7.0,
+      "t_end": 7.5,
+      "reason": "7.0~7.5s open gripper to release bowl."
+    }
+  ]
+}

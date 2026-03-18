@@ -1,0 +1,1 @@
+Only look at 0-7s of the video. The correction axis (-X, backward) is correct. The robot nearly reached the frying pan but had a small miscalibration during pickup. Behavior after 7s is wrong and should be ignored. Keep dimension=x, direction=-1, t_start=5.0, t_end=6.0. Only adjust magnitude if needed.

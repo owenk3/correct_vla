@@ -1,0 +1,22 @@
+{
+  "axes": [
+    {
+      "dimension": "x",
+      "direction": "+1",
+      "magnitude_term": "slightly",
+      "magnitude_value": 0.2,
+      "t_start": 6.0,
+      "t_end": 7.0,
+      "reason": "At 6~7s move slightly forward (+X) to reach frying pan."
+    },
+    {
+      "dimension": "z",
+      "direction": "-1",
+      "magnitude_term": "slightly",
+      "magnitude_value": -0.2,
+      "t_start": 6.0,
+      "t_end": 7.0,
+      "reason": "At 6~7s move slightly down (-Z) to reach frying pan."
+    }
+  ]
+}

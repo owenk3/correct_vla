@@ -1,0 +1,40 @@
+{
+  "axes": [
+    {
+      "dimension": "z",
+      "direction": "-1",
+      "magnitude_term": "more",
+      "magnitude_value": -0.4,
+      "t_start": 5.0,
+      "t_end": 6.0,
+      "reason": "At 5~6s arm is too high; move more down (-Z) to approach frying pan."
+    },
+    {
+      "dimension": "y",
+      "direction": "-1",
+      "magnitude_term": "slightly",
+      "magnitude_value": -0.2,
+      "t_start": 5.0,
+      "t_end": 6.0,
+      "reason": "At 5~6s arm is too far right; move slightly left (-Y)."
+    },
+    {
+      "dimension": "x",
+      "direction": "+1",
+      "magnitude_term": "slightly",
+      "magnitude_value": 0.2,
+      "t_start": 8.0,
+      "t_end": 8.3,
+      "reason": "At 8s move slightly inside/forward (+X)."
+    },
+    {
+      "dimension": "z",
+      "direction": "-1",
+      "magnitude_term": "more",
+      "magnitude_value": -0.4,
+      "t_start": 8.3,
+      "t_end": 8.8,
+      "reason": "At 8.3s move more down (-Z) to grab frying pan."
+    }
+  ]
+}

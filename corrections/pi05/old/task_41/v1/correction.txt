@@ -1,0 +1,1 @@
+Before 4s is correct. At 5~6s arm is too far up and right — move more down (-Z) and slightly left (-Y) to approach frying pan. At 8s move slightly forward (+X, slightly inside). At 8.3s move more down (-Z) to grab frying pan.

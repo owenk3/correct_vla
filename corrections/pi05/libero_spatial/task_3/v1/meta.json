@@ -1,0 +1,6 @@
+{
+  "task_id": 3,
+  "task": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate",
+  "version": "v1",
+  "feedback": "right little more 0.6~1.2s; backward slightly 1.0~1.5s; down slightly more 1.6~2.0s"
+}

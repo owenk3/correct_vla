@@ -1,0 +1,1 @@
+right little 1.0~1.5s; down little 2.0~3.0s; down slightly 3.5~4.0s

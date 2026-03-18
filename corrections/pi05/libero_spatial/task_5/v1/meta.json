@@ -1,0 +1,6 @@
+{
+  "task_id": 5,
+  "task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+  "version": "v1",
+  "feedback": "up little 2.2~2.5s; forward little 2.2~2.5s"
+}

@@ -1,0 +1,40 @@
+{
+  "axes": [
+    {
+      "dimension": "x",
+      "direction": "-1",
+      "magnitude_term": "slightly",
+      "magnitude_value": 0.0,
+      "t_start": 0.5,
+      "t_end": 1.0,
+      "mode": "add"
+    },
+    {
+      "dimension": "z",
+      "direction": "+1",
+      "magnitude_term": "slightly",
+      "magnitude_value": 0.0,
+      "t_start": 4.5,
+      "t_end": 5.0,
+      "mode": "add"
+    },
+    {
+      "dimension": "z",
+      "direction": "-1",
+      "magnitude_term": "little",
+      "magnitude_value": 0.0,
+      "t_start": 5.5,
+      "t_end": 6.0,
+      "mode": "add"
+    },
+    {
+      "dimension": "y",
+      "direction": "-1",
+      "magnitude_term": "more",
+      "magnitude_value": 0.0,
+      "t_start": 5.5,
+      "t_end": 6.5,
+      "mode": "add"
+    }
+  ]
+}

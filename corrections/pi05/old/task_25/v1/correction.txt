@@ -1,0 +1,1 @@
+At 3~4s pick up more and more upward (+Z). At 4~5s move more and more to the left (-Y). Currently robot is putting in lower drawer instead of on top of cabinet.

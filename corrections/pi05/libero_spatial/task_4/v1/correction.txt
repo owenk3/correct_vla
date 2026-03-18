@@ -1,0 +1,1 @@
+right slightly 1.0~1.3s; forward slightly 1.2~1.5s

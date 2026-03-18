@@ -1,0 +1,79 @@
+# Human Corrections for OpenVLA-OFT
+# Format: task_suite_name | episode | timed_feedback
+# Model: moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10
+# num_trials_per_task: 50 (in-distribution), 5 (libero_90 ood)
+
+================================================================================
+[libero_spatial] (in-distribution)
+failure episodes: 96, 98, 219, 252, 273, 293, 361, 393, 400, 462, 463
+================================================================================
+
+episode=96   | timed_feedback: "down +0.2 2.2~2.6s"
+episode=98   | timed_feedback: "left +0.35 0.7~1.2s; back +0.5 1.2~1.8s"
+episode=219  | timed_feedback: "right +0.1 1.1~1.4s"
+episode=252  | timed_feedback: "up +0.2 0.8~1.4s"
+episode=273  | timed_feedback: "back +0.5 0.1~0.5s"
+episode=293  | timed_feedback: "up +0.2 0.8~1.4s"
+episode=361  | timed_feedback: "back +0.5 0.1~0.5s; right +0.3 0.5~0.8s"
+episode=393  | timed_feedback: "back +0.5 0.1~0.5s; right +0.15 0.5~0.8s"
+episode=400  | timed_feedback: "down +0.5 0~0.5s; back +0.4 0~0.5s; right +0.15 0.2~0.5s"
+episode=462  | timed_feedback: "down +0.4 0.8~1.4s"
+episode=463  | timed_feedback: "up +0.4 0.4~0.6s"
+
+================================================================================
+[libero_object] (in-distribution)
+failure episodes: 108, 117, 181, 192, 194, 268
+================================================================================
+
+episode=108  | timed_feedback: "forward +0.2 1.4~2.0s"
+episode=117  | timed_feedback: "up +0.1 1.4~2.0s; forward +0.2 1.4~2.0s"
+episode=181  | timed_feedback: "up +0.2 1.4~2.0s"
+episode=192  | timed_feedback: "up +0.1 1.4~2.0s; forward +0.2 1.4~2.0s"
+episode=194  | timed_feedback: "up +0.2 1.4~2.0s"
+episode=268  | timed_feedback: "left +0.3 0.4~1.0s"
+
+================================================================================
+[libero_goal] (in-distribution)
+failure episodes: 39, 171, 293, 345, 459
+================================================================================
+
+episode=39   | timed_feedback: "left +0.4 1.4~2.0s"
+episode=171  | timed_feedback: "left +0.2 0.2~0.4s"
+episode=293  | timed_feedback: "left +0.2 0.2~0.6s"
+episode=345  | timed_feedback: "left +0.3 1.2~1.8s"
+episode=459  | timed_feedback: "down +0.3 1.4~1.8s; back +0.2 1.6~1.8s"
+
+================================================================================
+[libero_10] (in-distribution)
+failure episodes: 1, 15, 87, 175, 286, 305, 306, 324, 374, 409, 411, 462, 476
+================================================================================
+
+episode=1    | timed_feedback: "forward +0.1 3.4~3.8s; down +0.2 10.0~11.0s"
+episode=15   | timed_feedback: "back +0.2 1.2~1.8s; up +0.1 0.0~1.4s"
+episode=87   | timed_feedback: "up +0.1 2.0~2.6s"
+episode=175  | timed_feedback: "forward +0.2 4.0~5.0s"
+episode=286  | timed_feedback: "right +0.1 5.0~5.5s"
+episode=305  | timed_feedback: "left +0.2 6.0~7.0s"
+episode=306  | timed_feedback: "right +0.1 3.4~4.2s; left +0.2 7.0~8.0s"
+episode=324  | timed_feedback: "left +0.2 6.2~7.0s"
+episode=374  | timed_feedback: "left +0.1 1.4~2.0s; forward +0.1 1.4~2.0s"
+episode=409  | timed_feedback: "forward +0.1 8.5~9.5s; down +0.2 8.5~9.5s"
+episode=411  | timed_feedback: "forward +0.1 8.0~8.7s"
+episode=462  | timed_feedback: "forward +0.15 3.8~4.4s"
+episode=476  | timed_feedback: "forward +0.1 3.8~4.4s"
+
+================================================================================
+[libero_90] (out-of-distribution, num_trials_per_task=5)
+================================================================================
+
+episode=1    | timed_feedback: "left +0.5 0.1~0.4s; forward +0.5 0.2~0.5s; up +0.1 0.2~0.4s; right +0.2 1.0~1.5s"
+episode=11   | timed_feedback: "backward +0.65 0.1~0.4s; down +0.2 0.1~0.3s"
+episode=16   | timed_feedback: "left +0.6 0.1~0.8s; up +1 0.9~1.5s"
+episode=26   | timed_feedback: "left +0.3 0.1~0.5s; forward +0.3 0.9~1.3s; right +0.3 1.1~1.5s"
+episode=31   | timed_feedback: "left +0.3 0.1~0.5s; forward +0.3 0.9~1.3s; right +0.3 1.1~1.5s"
+episode=36   | timed_feedback: "forward +0.15 0.1~0.6s; right +0.6 0.1~0.6s; up +0.4 0.1~0.6s"
+episode=48   | timed_feedback: "backward +0.4 2.8~3.2s; down +0.4 3.4~4.2s"
+episode=51   | timed_feedback: "up +1 3.8~4.6s; right +1.3 3.8~4.6s"
+episode=66   | timed_feedback: "up +0.2 0.1~0.5s; forward +0.7 0.2~0.9s; left +0.3 0.7~1.3s; down +0.3 1.3~1.8s; right +0.3 2.8~3.2s; backward +0.3 3.2~3.6s"
+episode=77   | timed_feedback: "forward +0.4 0.1~0.4s; left +0.4 0.2~0.8s; up +1 2.0~2.6s; right +2.5 2.8~3.6s"
+episode=201  | timed_feedback: "forward +0.4 0.6~1.2s"

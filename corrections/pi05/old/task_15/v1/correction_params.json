@@ -1,0 +1,12 @@
+{
+  "axes": [
+    {
+      "dimension": "y",
+      "direction": "-1",
+      "magnitude_value": 0.2,
+      "t_start": 1.0,
+      "t_end": 2.0,
+      "reason": "At 1~2s move slightly more left (-Y): arm is picking top bowl, need to shift to middle bowl."
+    }
+  ]
+}

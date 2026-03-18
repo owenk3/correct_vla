@@ -1,0 +1,36 @@
+# Experiments
+
+## Eval modes
+
+| Mode | Flag | Description |
+|------|------|-------------|
+| vanilla | `--eval vanilla` | Base VLA policy, no correction |
+| llm_baseline | `--eval llm_baseline` | VLM watches failure → generates correction → action bias |
+| ours | `--eval ours` | Human correction → timed action bias |
+
+## Run commands
+
+```bash
+# Vanilla baseline
+PYTHONPATH=$PYTHONPATH:$(pwd)/LIBERO python experiments/robot/libero/vla_eval.py \
+  --pretrained_checkpoint lerobot/pi05_libero_finetuned \
+  --model_family pi05 --task_suite_name libero_90
+
+# LLM-Baseline (VLM-generated correction)
+PYTHONPATH=$PYTHONPATH:$(pwd)/LIBERO python experiments/robot/libero/vla_eval_failures.py \
+  --pretrained_checkpoint lerobot/pi05_libero_finetuned \
+  --model_family pi05 --task_suite_name libero_90 \
+  --eval llm_baseline --episode 127 --max_attempts 3
+
+# Ours (human correction)
+PYTHONPATH=$PYTHONPATH:$(pwd)/LIBERO python experiments/robot/libero/vla_eval_failures.py \
+  --pretrained_checkpoint lerobot/pi05_libero_finetuned \
+  --model_family pi05 --task_suite_name libero_90 \
+  --eval ours --episode 127 --max_attempts 3
+
+# Batch mode
+PYTHONPATH=$PYTHONPATH:$(pwd)/LIBERO python experiments/robot/libero/vla_eval_failures.py \
+  --pretrained_checkpoint lerobot/pi05_libero_finetuned \
+  --model_family pi05 --eval ours \
+  --failure_dir ./rollouts/failure --max_attempts 3
+```

@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+*.ipynb_checkpoints/
+rollouts/
+*.pkl
+*.pt
+*.safetensors
+wandb/
+/LIBERO/
+.env

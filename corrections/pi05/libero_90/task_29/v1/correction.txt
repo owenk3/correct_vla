@@ -1,0 +1,1 @@
+forward slightly 0.0~1.2s; right slightly 1.1~1.5s; down slightly 1.2~1.6s; right slightly 2.5~3.0s; up slightly 2.5~3.0s

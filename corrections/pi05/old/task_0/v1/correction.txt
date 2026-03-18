@@ -1,0 +1,1 @@
+At 6~6.5s move slightly up (+Z). At 6.5~7s move more to the left (-Y). At 7~8s move very slightly down (-Z). At 7.5~8.5s push slightly to the right (+Y).

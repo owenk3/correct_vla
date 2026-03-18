@@ -1,0 +1,86 @@
+You are an expert roboticist helping refine a correction for a robot arm across multiple attempts.
+
+Task: {task_instruction}
+
+You will see two videos:
+  [PART 1] Original failure video — what the robot did wrong before any correction
+  [PART 2] Attempt video — what happened after the correction was applied
+
+A human watched the original failure and wrote this correction (treat as near ground truth):
+**Human Correction:** {human_correction}
+
+CRITICAL — Video-to-action coordinate mapping:
+The video feed is rotated 180°. Directions AS SEEN IN THE VIDEO map to actions as follows:
+  Video-left  = +Y action,   Video-right = -Y action
+  Video-forward = +X action,  Video-backward = -X action
+  Up (toward camera) = +Z,   Down (away from camera) = -Z
+When the human says "move left", they mean left IN THE VIDEO = +Y action.
+
+---
+
+## Previous attempt reasoning:
+{previous_reasoning}
+
+---
+
+## Numerical feedback from the previous attempt:
+{correction_feedback}
+
+Each entry:
+  dim | t_start~t_end (s) | applied_bias_mean (m/step) | eef_displacement_m (m, signed)
+
+---
+
+## Your reasoning process:
+
+### Step 1: Understand the task (ALWAYS do this first)
+
+Read the task instruction carefully:
+- What is the robot supposed to accomplish?
+- What objects are involved and where should they end up?
+- What does a successful completion look like?
+
+### Step 2: Diagnose the failure
+
+Watch [PART 1] (original failure). Answer:
+- What went wrong? Describe what the arm actually did vs what it should have done.
+- At what timestamp T_commit did the arm commit to the wrong trajectory?
+- What is the root cause of failure? (wrong direction, insufficient height, missed target, etc.)
+
+### Step 3: Understand the human correction
+
+The human correction is near ground truth. Understand it deeply:
+- What physical change is the human asking for?
+- Why does that change fix the root cause identified in Step 2?
+- Map the human's description to axes using the VIDEO coordinate mapping above.
+
+### If this is a subsequent refinement (previous reasoning exists):
+
+**A. Compare previous attempt to task goal**
+Watch [PART 2] and use numerical feedback:
+- Did the correction move the arm closer to the task goal?
+- What did the correction actually do physically?
+- Did it address the root cause? If not, why not?
+  - Was the magnitude too small / too large?
+  - Was the direction wrong (check video coordinate mapping)?
+  - Was the time window misaligned with the critical phase?
+  - Did the arm correct but drift back after the window ended?
+
+**B. Refine approach**
+Based on the gap between task goal and what happened:
+- What specifically needs to change and why?
+- Magnitude refinement: magnitude_value = required_displacement / (applied_bias_mean × window_duration)
+- If arm drifts back: extend t_end to cover full approach+grasp
+- If arm fights correction strongly: consider mode=override
+
+---
+
+## Output rules:
+- NEVER output t_start > 4.0 if T_commit < 4s
+- Use ±X/±Y/±Z notation (remember: video-left = +Y, video-right = -Y)
+- CRITICAL: t_end must cover FULL approach+grasp (at least t=5s) — VLA motor prior pulls arm back once bias ends
+- magnitude_value must be an explicit unsigned float (sign encoded in ±axis direction)
+- mode=override: suppresses VLA's action on this axis entirely and replaces with bias
+
+Output your full reasoning above, then on a final line:
+CORRECTION: <t_start>~<t_end>s <±axis> magnitude_value=<float> [mode=override]

@@ -1,0 +1,6 @@
+{
+  "task_id": 4,
+  "task": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet",
+  "version": "v1",
+  "feedback": "right slightly 1.0~1.3s; forward slightly 1.2~1.5s"
+}

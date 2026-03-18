@@ -1,0 +1,12 @@
+{
+  "axes": [
+    {
+      "dimension": "z",
+      "direction": "-1",
+      "magnitude_value": 0.4,
+      "t_start": 2.0,
+      "t_end": 3.0,
+      "reason": "At 2~3s move more down (-Z): currently grabbing at too high a position."
+    }
+  ]
+}

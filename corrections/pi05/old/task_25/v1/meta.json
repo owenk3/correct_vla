@@ -1,0 +1,10 @@
+{
+  "task_id": 25,
+  "episode": 126,
+  "version": "v1",
+  "task": "put_the_black_bowl_on_top_of_the_cabinet",
+  "files": [
+    "correction.txt",
+    "correction_params.json"
+  ]
+}

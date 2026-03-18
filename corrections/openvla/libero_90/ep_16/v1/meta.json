@@ -1,0 +1,10 @@
+{
+  "model": "moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
+  "model_family": "openvla",
+  "task_suite": "libero_90",
+  "task_id": 3,
+  "episode": 16,
+  "num_trials_per_task": 5,
+  "version": "v1",
+  "feedback": "left +0.6 0.1~0.8s; up +1 0.9~1.5s"
+}

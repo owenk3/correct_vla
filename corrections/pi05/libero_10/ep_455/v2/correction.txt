@@ -1,0 +1,1 @@
+down slightly 2.0~3.0s; backward slightly 5.0~6.0s; down slightly 5.0~6.0s

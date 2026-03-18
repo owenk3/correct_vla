@@ -1,0 +1,1 @@
+left slightly 2.2~2.6s; forward much 0.0~1.0s

@@ -1,0 +1,13 @@
+{
+  "axes": [
+    {
+      "dimension": "x",
+      "direction": "+1",
+      "magnitude_value": 0.15,
+      "envelope": "flat",
+      "t_start": 3.8,
+      "t_end": 4.4,
+      "mode": "add"
+    }
+  ]
+}

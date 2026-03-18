@@ -1,0 +1,31 @@
+{
+  "axes": [
+    {
+      "dimension": "y",
+      "direction": "-1",
+      "t_start": 1.0,
+      "t_end": 1.5,
+      "mode": "add",
+      "magnitude_term": "little",
+      "magnitude_value": 0.0
+    },
+    {
+      "dimension": "z",
+      "direction": "-1",
+      "t_start": 2.0,
+      "t_end": 3.0,
+      "mode": "add",
+      "magnitude_term": "little",
+      "magnitude_value": 0.0
+    },
+    {
+      "dimension": "z",
+      "direction": "-1",
+      "t_start": 3.5,
+      "t_end": 4.0,
+      "mode": "add",
+      "magnitude_term": "slightly",
+      "magnitude_value": 0.0
+    }
+  ]
+}

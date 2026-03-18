@@ -1,0 +1,6 @@
+{
+  "task_id": 0,
+  "task": "close_the_top_drawer_of_the_cabinet",
+  "version": "v3",
+  "feedback": "backward slightly 0.5~1.0s; up slightly 4.5~5.0s; down little 5.5~6.0s; right more 5.5~6.5s"
+}

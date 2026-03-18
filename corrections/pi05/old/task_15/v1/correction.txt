@@ -1,0 +1,1 @@
+At 1~2s move slightly more to the left (-Y). Currently picking up the top bowl, not the middle bowl.

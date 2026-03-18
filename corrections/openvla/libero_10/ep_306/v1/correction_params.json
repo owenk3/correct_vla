@@ -1,0 +1,22 @@
+{
+  "axes": [
+    {
+      "dimension": "y",
+      "direction": "+1",
+      "magnitude_value": 0.1,
+      "envelope": "flat",
+      "t_start": 3.4,
+      "t_end": 4.2,
+      "mode": "add"
+    },
+    {
+      "dimension": "y",
+      "direction": "-1",
+      "magnitude_value": 0.2,
+      "envelope": "flat",
+      "t_start": 7.0,
+      "t_end": 8.0,
+      "mode": "add"
+    }
+  ]
+}

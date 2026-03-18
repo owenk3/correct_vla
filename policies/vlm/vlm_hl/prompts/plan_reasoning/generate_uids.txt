@@ -1,0 +1,5 @@
+You are provided an image of a scene in which a robotic arm will manipulate objects on the table in the scene. The task for the robot to accomplish is provided as follows: {instruction}.
+
+Identify and list the objects in the scene with the color and name of each object. If there is more than one object of the same color and name, provide the minimal additional description to each duplicate so that they can be differentiated from one another.
+
+Your output should be a list of strings. All strings in the list must be unique. The list of objects should be in the following format: [object1, object2, object3, ...].

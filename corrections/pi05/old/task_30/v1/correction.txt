@@ -1,0 +1,1 @@
+At 2~3s move more down (-Z). Currently grabbing at too high a position.

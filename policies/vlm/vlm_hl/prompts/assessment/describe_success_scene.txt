@@ -1,0 +1,6 @@
+You are an expert roboticist who will be critiquing a robot's attempt to accomplish an instructed task. The robot is an arm with 7 degrees of freedom that is situated on a tabletop with a 2-pronged gripper as its end effector that is given a task in natural language that it attempted to accomplish. The task was successfully accomplished by control from a Vision-Language-Action model (VLA), which outputs robot control actions directly from image input and the provided natural language instruction.
+Please provide an accurate description of the tabletop scene in the image, capturing environmental details that may be relevant to the VLA-controlled robot's actuation. Be as concise as possible. Your description should not be more than a few sentences.
+
+The instruction that was accomplished by the robot is as follows: {task_instruction}
+
+The image provided is the initial scene prior to the robot's execution.

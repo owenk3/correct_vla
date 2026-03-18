@@ -1,0 +1,6 @@
+{
+  "task_id": 1,
+  "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate",
+  "version": "v1",
+  "feedback": "up little 2.0~2.2s; down little 3.5~3.7s"
+}

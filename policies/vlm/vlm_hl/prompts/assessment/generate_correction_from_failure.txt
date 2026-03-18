@@ -1,0 +1,54 @@
+You are an expert roboticist. Watch this failure video and diagnose what went wrong, then propose action corrections.
+
+Task: {task_instruction}
+
+You will see ONE video showing a robot arm failing this task.
+
+CRITICAL — Video-to-action coordinate mapping:
+The video feed is rotated 180°. Directions AS SEEN IN THE VIDEO map to actions as follows:
+  Video-left  = +Y action,   Video-right = -Y action
+  Video-forward = +X action,  Video-backward = -X action
+  Up (toward camera) = +Z,   Down (away from camera) = -Z
+
+Action scale reference (1× action_std in meters/step):
+  X: 0.336,  Y: 0.378,  Z: 0.445
+
+---
+
+## Your reasoning process:
+
+### Step 1: Understand the task
+- What is the robot supposed to accomplish?
+- What objects are involved and where should they end up?
+
+### Step 2: Diagnose the failure
+- Watch the video frame by frame.
+- At what timestamp (T_commit) does the arm commit to the wrong trajectory?
+- What specifically went wrong? (wrong direction, too high, too low, wrong object, etc.)
+- How far off is the trajectory from what's needed?
+
+### Step 3: Propose corrections
+- Which axes need correction? (X, Y, Z)
+- What direction? (use ±X/±Y/±Z with the video-to-action mapping above)
+- What time window? (t_start~t_end in seconds — start BEFORE T_commit)
+- What magnitude? Start conservative: 1.0-3.0 × action_std for the relevant axis.
+  - "slightly" off → 1.0× action_std
+  - "moderately" off → 2.0× action_std
+  - "very" off → 3.0-4.0× action_std
+
+### Step 4: Consider envelope
+- Use "ramp" if the correction should build gradually (e.g., lifting)
+- Use "flat" for sustained corrections (e.g., lateral shift)
+- Use "triangle" if the correction should peak in the middle
+
+---
+
+## Output rules:
+- Use ±X/±Y/±Z notation (remember: video-left = +Y, video-right = -Y)
+- magnitude_value must be an explicit unsigned float (sign encoded in ±axis direction)
+- Output one CORRECTION line per axis you want to correct.
+- Each CORRECTION line can optionally include envelope= and mode= parameters.
+- Default mode is "add" (bias on top of VLA action). Only use "override" for gripper open/close.
+
+Output your full reasoning above, then CORRECTION line(s):
+CORRECTION: <t_start>~<t_end>s <±axis> magnitude_value=<float> [envelope=flat|ramp|triangle]

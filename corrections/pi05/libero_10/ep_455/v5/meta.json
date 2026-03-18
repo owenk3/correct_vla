@@ -1,0 +1,9 @@
+{
+  "model_family": "pi05",
+  "task_suite": "libero_10",
+  "task_id": 9,
+  "episode": 455,
+  "num_trials_per_task": 50,
+  "version": "v5",
+  "feedback": "right little 1.0~1.5s; down little 2.0~3.0s; down slightly 3.5~4.0s"
+}
